@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      APP_SECRET: "change-this-demo-secret-before-sharing"
+      DATABASE_URL: "sqlite:///./app.db"
+    volumes:
+      - app-data:/app
+volumes:
+  app-data:
